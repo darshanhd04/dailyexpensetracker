@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Georgia', serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: white;
+    background: linear-gradient(135deg, #ffffff, #1E4BB5);
+}
+
+.container {
+    display: flex;
+    width: 60%;
+    height: 70vh;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.left-section {
+    width: 50%;
+    background: royalblue;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    box-shadow: 0px 10px 3px rgba(0, 0, 0, 0.2);
+}
+
+.left-section h1 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.left-section p {
+    font-size: 18px;
+    margin-top: 100px;
+    font-weight: bold;
+}
+
+footer {
+    position:absolute ;
+    bottom: 20px;
+    left: 20px;
+    font-size: 12px;
+}
+
+.right-section {
+    width: 50%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.menu button {
+    width: 200px;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    background: lightgray;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.menu button:hover {
+    background: royalblue;
+    color: white;
+}
+    </style>
+    <div class="container">
+        <div class="left-section">
+            <h1>Daily Expense Tracker</h1>
+            <p>Expense Insight</p>
+            <footer>© 2025. Drashan. All Rights Reserved.</footer>
+        </div>
+        <div class="right-section">
+            <div class="menu">
+                <button>Home</button>
+                <button>About Us</button>
+                <button>Contact Us</button>
+                <button>Queries</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

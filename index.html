@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Expense Tracker</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="newww.css">
+    <style>
+        body {
+            font-family:  Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #ffffff, #1E4BB5);
+            margin: 0;
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .container-box {
+            width: 60%;
+            height: 70%;
+            background: white;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            overflow: hidden;
+            transform: translateY(30px);
+            animation: slideUp 1s ease-in-out forwards;
+            margin-top: 40px;
+        }
+
+        @keyframes slideUp {
+            0% { transform: translateY(30px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        .left-section {
+            background: linear-gradient(135deg, #4169E1, #1E4BB5);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .start-button {
+            display: inline-block;
+            padding: 12px 25px;
+            font-size: 18px;
+            color: white;
+            background: linear-gradient(135deg, #f60000, #ff4500);
+            border: none;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .start-button:hover {
+            background: linear-gradient(135deg, #ff4500, #ff6347);
+            transform: scale(1.1);
+            box-shadow: 0px 8px 20px rgba(255, 69, 0, 0.5);
+        }
+
+        .footer {
+            width: 100%;
+            text-align: center;
+            padding: 20px;
+            background: #1E4BB5;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="Daily.png" alt="Logo" class="logo">
+            <h1 class="nav-heading">Daily Expense Tracker</h1>
+        </div>
+        <div class="nav-links">
+            <a href="daily expense.html">Home</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="about.html">About</a>
+            <a href="Query.html">FAQs</a>
+            <a href="daily expenses2.html">Register</a>
+        </div>
+    </nav>
+    
+    <div class="container container-box d-flex">
+        <div class="col-md-6 left-section d-flex flex-column justify-content-center">
+            <h1>Daily Expense Tracker</h1>
+            <p><strong>Track your expenses, stay on budget!</strong></p>
+        </div>
+        <div class="col-md-6 d-flex flex-column align-items-center justify-content-center text-center p-4">
+            <img src="Daily.png" alt="Expense Tracker Logo" class="img-fluid" width="150">
+            <p><strong>D E Tracker</strong></p>
+            <a href="daily expenses2.html" class="start-button">START</a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        © 2025. Darshan. All Rights Reserved.
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Add Purse</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            background-color: #f8f9fa;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #ffffff, #1E4BB5);
+        }
+
+        .container {
+            max-width: 400px;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        h2 {
+            font-weight: bold;
+            color: #555;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 15px;
+        }
+
+        .input-box {
+            width: 100%;
+            background-color: #e8e8e8;
+            border: none;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 18px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .btn-primary {
+            background-color: #3b50f5;
+            color: white;
+            border-radius: 8px;
+            padding: 10px;
+            width: 100%;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .btn-primary:hover {
+            background-color: #2b40d5;
+        }
+
+        .btn-home {
+            background-color: #adf4bd;
+            color: white;
+            border-radius: 8px;
+            padding: 10px;
+            width: 100%;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .btn-home:hover {
+            background-color: #ff0000;
+        }
+
+        .footer {
+            font-size: 12px;
+            color: #999;
+            margin-top: 20px;
+        }
+        .custom-select {
+        background: url('placeholder-image.png') no-repeat left center;
+        background-size: 30px; /* Adjust size */
+        padding-left: 40px; /* Space for image */
+        height: 40px;
+    }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Daily Expense Tracker</h2>
+        <h4><a href="#" class="text-dark text-decoration-none fw-bold">Add Purse</a></h4>
+
+        <label>Select Month</label>
+        <select class="form-control input-box" id="monthSelect">
+            <option value="" disabled selected hidden>Select a month</option>
+            <option value="January">January</option>
+            <option value="February">February</option>
+            <option value="March">March</option>
+            <option value="April">April</option>
+            <option value="May">May</option>
+            <option value="June">June</option>
+            <option value="July">July</option>
+            <option value="August">August</option>
+            <option value="September">September</option>
+            <option value="October">October</option>
+            <option value="November">November</option>
+            <option value="December">December</option>
+        </select>
+
+        <label>Add Your Expense</label>
+        <input type="number" class="form-control input-box" id="expenseInput" placeholder="Enter expense amount">
+
+        <button class="btn btn-primary mt-3" onclick="saveExpense()">Done</button>
+        <button class="btn btn-home" onclick="goHome()"><a href="Land.html">Home</a></button>
+
+        <p class="footer">© 2025. Drashan. All Rights Reserved.</p>
+    </div>
+
+    <script>
+        function saveExpense() {
+            let month = document.getElementById("monthSelect").value;
+            let expense = document.getElementById("expenseInput").value;
+
+            if (!expense) {
+                alert("Please enter an expense amount.");
+                return;
+            }
+
+            alert("Expense of " + expense + " saved for " + month);
+            window.location.href = "Land.html"; // Redirects to the next page
+        }
+
+        function goHome() {
+            window.location.href = "Home.html"; // Redirects to the home page
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

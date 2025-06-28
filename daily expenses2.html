@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <link rel="stylesheet" href="newww.css">
+    <title>Login & Register</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: linear-gradient(135deg, #ffffff, #1E4BB5);
+            height: 100vh;
+        }
+
+        /* Navbar Styling */
+    
+        
+
+        /* Main Container */
+        .container {
+            display: flex;
+            width: 800px;
+            height: 450px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            margin-top: 150px;
+        }
+
+        /* Left Section */
+        .left {
+            background: blue;
+            color: white;
+            flex: 1; /* Makes it flexible */
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-radius: 10px 60px 60px 10px; /* Proper border styling */
+        }
+
+        .register-btn {
+            margin-top: 15px;
+            padding: 8px 20px;
+            border: none;
+            background: white;
+            color: blue;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+        .register-btn:hover {
+            background: rgb(248, 198, 48);
+        }
+
+        .copyright {
+            position: absolute;
+            bottom: 15px;
+            font-size: 12px;
+        }
+
+        /* Right Section */
+        .right {
+            flex: 1; /* Adjusts proportionally */
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .input-field {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid gray;
+            border-radius: 5px;
+            background: lightgray;
+        }
+
+        .forgot-password {
+            font-size: 12px;
+            color: gray;
+            cursor: pointer;
+            margin-bottom: 15px;
+        }
+
+        .login-btn {
+            width: 80%;
+            padding: 10px;
+            border: none;
+            background: rgb(159, 159, 167);
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+        .login-btn:hover {
+            background: rgb(240, 207, 40);
+        }
+
+        .login-text {
+            font-size: 12px;
+            color: gray;
+            margin: 10px 0;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-btn {
+            width: 35px;
+            height: 35px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            background: lightgray;
+            cursor: pointer;
+            transition: 0.3s;
+            font-weight: bold;
+        }
+
+        .social-btn:hover {
+            background: darkgray;
+        }
+
+        /* Footer Styling */
+        .footer {
+            width: 100%;
+            background: #1E4BB5;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            position: relative;
+            bottom: 0;
+            margin-top: 100px;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer p {
+            font-size: 14px;
+            margin-top: 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .footer-links a:hover {
+            color: #FFD700;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="Daily.png" alt="Logo" class="logo">
+            <h1 class="nav-heading">Daily Expense Tracker</h1>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="about.html">About</a>
+            <a href="Query.html">FAQs</a>
+            <a href="daily expenses2.html">Register</a>
+        </div>
+    </nav>
+
+    <!-- Login/Register Container -->
+    <div class="container">
+        <div class="left">
+            <h2>Hello, Welcome!</h2>
+            <p>Don't have an account?</p>
+            <a href="daily expense3.html" class="register-btn">Register</a>
+            <p class="copyright">© 2025. Drashan. All Rights Reserved.</p>
+        </div>
+        <div class="right">
+            <h2>Login</h2>
+            <input type="text" placeholder="Username" class="input-field">
+            <input type="password" placeholder="Password" class="input-field">
+            <p class="forgot-password">Forgot Password?</p>
+            <a href="Land.html" class="login-btn">Login</a>
+            <p class="login-text">or login with special platform</p>
+            <div class="social-icons">
+                <button class="social-btn"><i class="fab fa-google"></i></button>
+                <button class="social-btn"><i class="fab fa-facebook-f"></i></button>
+                <button class="social-btn"><i class="fab fa-linkedin-in"></i></button>
+                <button class="social-btn"><i class="fab fa-twitter"></i></button>
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2025. Drashan. All Rights Reserved.</p>
+            
+            
+        </div>
+    </footer>
+
+</body>
+</html>

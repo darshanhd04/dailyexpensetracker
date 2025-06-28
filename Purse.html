@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Add Purse</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="newww.css">
+    <style>
+        body {
+            font-family: Verdana, Geneva, sans-serif;
+            background: linear-gradient(135deg, #ffffff, #1E4BB5);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .container-box {
+            width: 500px;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            margin: auto;
+            margin-top: 180px;
+        }
+
+        h2 {
+            font-weight: bold;
+            color: #555;
+        }
+
+        label {
+            font-size: 20px;
+            font-weight: bold;
+            display: block;
+            margin-top: 15px;
+        }
+
+        .input-box {
+            width: 100%;
+            background-color: #e8e8e8;
+            border: none;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 16px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        #monthSelect {
+            opacity: 0.7;
+        }
+
+        #monthSelect option:first-child {
+            color: #aaa;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #7acad3, #ffffff);
+            border: none;
+            color: white;
+            transition: all 0.3s ease-in-out;
+            padding: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            width: 100%;
+            border-color: black;
+
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #ff4081, #ff1744);
+            transform: scale(1.05);
+            box-shadow: 0px 8px 15px rgba(255, 64, 129, 0.5);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container-box">
+        <h2>Daily Expense Tracker</h2>
+        <h4><a href="#" class="text-dark text-decoration-none fw-bold">Add Purse</a></h4>
+
+        <label>Select Month</label>
+        <select class="form-control input-box" id="monthSelect">
+            <option value="" disabled selected hidden>Select a month</option>
+            <option value="January">January</option>
+            <option value="February">February</option>
+            <option value="March">March</option>
+            <option value="April">April</option>
+            <option value="May">May</option>
+            <option value="June">June</option>
+            <option value="July">July</option>
+            <option value="August">August</option>
+            <option value="September">September</option>
+            <option value="October">October</option>
+            <option value="November">November</option>
+            <option value="December">December</option>
+        </select>
+
+        <label>Add Your Expense</label>
+        <input type="number" class="form-control input-box" id="expenseInput" placeholder="Enter expense amount">
+
+        <button class="btn btn-primary mt-3" onclick="saveExpense()">Done</button>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmationModalLabel">Expense Saved</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p id="modalMessage"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" onclick="redirectToHome()">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function saveExpense() {
+            let month = document.getElementById("monthSelect").value;
+            let expense = document.getElementById("expenseInput").value;
+
+            if (!month) {
+                alert("Please select a month.");
+                return;
+            }
+
+            if (!expense) {
+                alert("Please enter an expense amount.");
+                return;
+            }
+
+            document.getElementById("modalMessage").innerText = "Expense of $" + expense + " saved for " + month + ".";
+            var modal = new bootstrap.Modal(document.getElementById("confirmationModal"));
+            modal.show();
+        }
+
+        function redirectToHome() {
+            window.location.href = "Land.html";
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

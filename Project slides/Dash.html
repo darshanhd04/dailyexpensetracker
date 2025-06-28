@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Daily Expense Tracker</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(135deg, #ffffff, #1E4BB5);
+        }
+
+        .layout-container {
+            max-width: 800px;
+            margin: auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+            width: 100%;
+        }
+
+        h2 {
+            font-weight: bold;
+        }
+
+        .expense-card {
+            background-color: #fce4ec;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .expense-card i {
+            font-size: 24px;
+            color: #e91e63;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: gray;
+        }
+
+        .icon-btn {
+            font-size: 24px;
+            cursor: pointer;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container layout-container">
+        <div class="d-flex justify-content-center position-relative">
+            <h1 class="mt-2">Daily Expense Tracker</h1>
+            <a href="index.html">
+                <i class="fas fa-home icon-btn position-absolute end-0 mt-2"></i>
+            </a>
+        </div>
+
+        <h2 class="mt-2">Dashboard</h2>
+
+        <div class="row mt-4 g-3">
+            <div class="col-md-6">
+                <div class="expense-card">
+                    <i class="fas fa-rupee-sign"></i> Todays Expens
+                    <p>18,000.00</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="expense-card">
+                    <i class="fas fa-rupee-sign"></i> Last 7 days
+                    <p>24,000.00</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="expense-card">
+                    <i class="fas fa-rupee-sign"></i> Last 30 days
+                    <p>35,000.00</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="expense-card">
+                    <i class="fas fa-rupee-sign"></i> Last 6 months
+                    <p>54,000.00</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="expense-card">
+                    <i class="fas fa-rupee-sign"></i> Last Year
+                    <p>84,000.00</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="expense-card">
+                    <i class="fas fa-rupee-sign"></i> Remaining Purse
+                    <p>20,000.00</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Home Button -->
+        <div class="mt-4">
+            <a href="Land.html" class="btn btn-primary">
+                <i class="fas fa-home"></i> Home
+            </a>
+        </div>
+
+        <div class="footer">
+            © 2025. Drashan. All Rights Reserved.
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Expense Tracker</title>
+    <style>
+        body {
+            font-family: Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #ffffff, #1E4BB5);
+            margin: 0;
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .container {
+            display: flex;
+            width: 55%;
+            height: 70%;
+            background: white;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            overflow: hidden;
+            transform: translateY(30px);
+            animation: slideUp 1s ease-in-out forwards;
+        }
+
+        @keyframes slideUp {
+            0% { transform: translateY(30px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        .left-section {
+            background: linear-gradient(135deg, #4169E1, #1E4BB5);
+            color: white;
+            width: 50%;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            transform: translateX(-30px);
+            animation: slideInLeft 1s ease-in-out forwards;
+        }
+
+        @keyframes slideInLeft {
+            0% { transform: translateX(-30px); opacity: 0; }
+            100% { transform: translateX(0); opacity: 1; }
+        }
+
+        .right-section {
+            background-color: white;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            transform: translateX(30px);
+            animation: slideInRight 1s ease-in-out forwards;
+        }
+
+        @keyframes slideInRight {
+            0% { transform: translateX(30px); opacity: 0; }
+            100% { transform: translateX(0); opacity: 1; }
+        }
+
+        .logo {
+            width: 180px;
+            height: auto;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .logo:hover {
+            transform: scale(1.1);
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 50px;
+            font-size: 14px;
+            color: white;
+            text-align: center;
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out forwards 1.5s;
+        }
+
+        .start-button {
+            display: inline-block;
+            padding: 12px 25px;
+            font-size: 18px;
+            color: white;
+            background: linear-gradient(135deg, #f60000, #ff4500);
+            border: none;
+            border-radius: 30px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .start-button:hover {
+            background: linear-gradient(135deg, #ff4500, #ff6347);
+            transform: scale(1.1);
+            box-shadow: 0px 8px 20px rgba(255, 69, 0, 0.5);
+        }
+
+        .start-button:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <h1>Daily Expense Tracker</h1>
+            <p><strong>Track your expenses, stay on budget!</strong></p>
+        </div>
+        <div class="right-section">
+            <img src="Daily.png" alt="Expense Tracker Logo" class="logo">
+            <p><strong>D E Tracker</strong></p>
+            <a href="daily expenses2.html" class="start-button">START</a>
+        </div>
+    </div>
+    <div class="footer">© 2025. Drashan. All Rights Reserved.</div>
+</body>
+</html>
